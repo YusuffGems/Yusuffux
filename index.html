@@ -4,54 +4,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="yoFIv73O5NNzzV2XCbNYwl0tXWs3RkoMPfd_Rc-54Vk" />
-  <!-- TITLE -->
-  <title>Yusuff UX | Portfolio</title>
 
   <!-- SEO -->
-  <meta name="description" content="UI/UX Designer & Flutter Developer from Chennai. Portfolio of Mohammed Yusuff." />
-  <meta name="author" content="Mohammed Yusuff" />
+  <title>Yusuffgems | UI/UX Designer, Flutter Developer & Digital Creator</title>
 
-  <!-- FAVICON -->
+  <meta name="title" content="Yusuffgems | UI/UX Designer, Flutter Developer & Digital Creator" />
+
+  <meta name="description"
+    content="Yusuffgems (Mohammed Yusuff) is a UI/UX Designer, Flutter Developer, Graphic Designer, and Digital Marketing Professional from Chennai. Explore portfolio projects, case studies, and creative digital solutions." />
+
+  <meta name="keywords"
+    content="Yusuffgems, Mohammed Yusuff, Yusuff UX, UI UX Designer Chennai, Flutter Developer Chennai, Figma Designer, Product Designer, Graphic Designer, Digital Marketing, Portfolio, Website Designer, Mobile App Designer" />
+
+  <meta name="author" content="Mohammed Yusuff" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yusuffux.com/" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- OPEN GRAPH -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Yusuff UX | Portfolio" />
-  <meta property="og:description" content="UI/UX Designer & Flutter Developer from Chennai" />
-  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://www.yusuffux.com/" />
+  <meta property="og:title" content="Yusuffgems | UI/UX Designer & Flutter Developer" />
+  <meta property="og:description"
+    content="Explore the portfolio of Mohammed Yusuff (Yusuffgems). UI/UX Design, Flutter Development, Branding, Graphic Design and Digital Marketing Projects." />
+  <meta property="og:image" content="https://www.yusuffux.com/og-image.png" />
+  <meta property="og:site_name" content="Yusuffgems" />
 
-  <!-- TWITTER -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yusuff UX | Portfolio" />
-  <meta name="twitter:description" content="UI/UX Designer & Flutter Developer from Chennai" />
-  <meta name="twitter:image" content="/og-image.png" />
+  <meta name="twitter:url" content="https://www.yusuffux.com/" />
+  <meta name="twitter:title" content="Yusuffgems | UI/UX Designer & Flutter Developer" />
+  <meta name="twitter:description"
+    content="Portfolio of Mohammed Yusuff featuring UI/UX Design, Flutter Apps, Branding and Digital Marketing Projects." />
+  <meta name="twitter:image" content="https://www.yusuffux.com/og-image.png" />
 
-  <!-- 🚀 GOOGLE TAG MANAGER (HEAD) -->
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Yusuff",
+    "alternateName": "Yusuffgems",
+    "url": "https://www.yusuffux.com",
+    "image": "https://www.yusuffux.com/og-image.png",
+    "jobTitle": "UI/UX Designer & Flutter Developer",
+    "description": "UI/UX Designer, Flutter Developer, Graphic Designer and Digital Marketing Professional from Chennai.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressCountry": "India"
+    }
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-AB12CD34');
   </script>
-  <!-- 🚀 END GOOGLE TAG MANAGER -->
+  <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
-  <!-- 🚀 GOOGLE TAG MANAGER (BODY - IMPORTANT) -->
+
+  <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-AB12CD34" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-AB12CD34"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
   </noscript>
-  <!-- 🚀 END GTM -->
+  <!-- End Google Tag Manager -->
 
   <div id="root"></div>
+
   <script type="module" src="/src/main.tsx"></script>
+
 </body>
 
 </html>

@@ -53,10 +53,12 @@ const KEYS = [
   "proj.scale.title","proj.scale.desc","proj.scale.cta",
   "proj.jobx.title","proj.jobx.desc","proj.jobx.cta",
   "proj.iilf.title","proj.iilf.desc","proj.iilf.cta",
-  "proj.news.title","proj.news.desc","proj.news.cta",
   "contact.title1","contact.title2","contact.subtitle","contact.name","contact.email","contact.message",
   "contact.send","contact.location","contact.toastTitle","contact.toastDesc",
   "footer.rights","lang.label",
+  "proj.neopics.title",
+"proj.neopics.desc",
+"proj.neopics.cta",
 ] as const;
 
 const en: Dict = {
@@ -117,9 +119,13 @@ const en: Dict = {
   "contact.toastTitle": "Opening email client!",
   "contact.toastDesc": "Your default email app will open with the message pre-filled.",
   "footer.rights": "All rights reserved.", "lang.label": "Language",
+  "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "Capturing moments, creating stories, and building visual identities through professional photography and creative branding.",
+"proj.neopics.cta": "View Website",
 };
 
 const ta: Dict = {
+  
   "nav.home": "முகப்பு", "nav.about": "என்னைப் பற்றி", "nav.skills": "திறன்கள்", "nav.services": "சேவைகள்",
   "nav.portfolio": "போர்ட்ஃபோலியோ", "nav.contact": "தொடர்பு", "nav.hireMe": "என்னை பணியமர்த்துங்கள்",
   "hero.greeting": "வணக்கம், நான்", "hero.role": "Flutter டெவலப்பர்",
@@ -173,6 +179,9 @@ const ta: Dict = {
   "contact.toastTitle": "மின்னஞ்சல் கிளையன்ட் திறக்கப்படுகிறது!",
   "contact.toastDesc": "உங்கள் இயல்புநிலை மின்னஞ்சல் ஆப்ஸ் முன்-நிரப்பப்பட்ட செய்தியுடன் திறக்கும்.",
   "footer.rights": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.", "lang.label": "மொழி",
+  "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "தொழில்முறை புகைப்படம் மற்றும் படைப்பாற்றல் மிக்க பிராண்டிங் மூலம் தருணங்களை பதிவு செய்து, கதைகளை உருவாக்கி, காட்சித் தனித்துவங்களை உருவாக்குகிறோம்.",
+"proj.neopics.cta": "வலைத்தளத்தை பார்க்க",
 };
 
 const hi: Dict = {
@@ -229,6 +238,9 @@ const hi: Dict = {
   "contact.toastTitle": "ईमेल क्लाइंट खुल रहा है!",
   "contact.toastDesc": "आपका डिफ़ॉल्ट ईमेल ऐप पहले से भरे संदेश के साथ खुलेगा।",
   "footer.rights": "सर्वाधिकार सुरक्षित।", "lang.label": "भाषा",
+  "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "पेशेवर फोटोग्राफी और क्रिएटिव ब्रांडिंग के माध्यम से यादगार पलों को कैद करना, कहानियाँ बनाना और ब्रांड पहचान तैयार करना।",
+"proj.neopics.cta": "वेबसाइट देखें",
 };
 
 const ar: Dict = {
@@ -285,6 +297,9 @@ const ar: Dict = {
   "contact.toastTitle": "جاري فتح تطبيق البريد!",
   "contact.toastDesc": "سيفتح تطبيق البريد الافتراضي مع رسالة جاهزة.",
   "footer.rights": "جميع الحقوق محفوظة.", "lang.label": "اللغة",
+  "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "نلتقط اللحظات ونصنع القصص ونبني الهويات البصرية من خلال التصوير الاحترافي والعلامات التجارية الإبداعية.",
+"proj.neopics.cta": "عرض الموقع",
 };
 
 // Compact translations for additional Indian scheduled languages.
@@ -301,6 +316,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "సంప్రదించండి", "contact.title2": "",
     "contact.send": "సందేశం పంపండి",
     "footer.rights": "అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.", "lang.label": "భాష",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "వృత్తిపరమైన ఫోటోగ్రఫీ మరియు సృజనాత్మక బ్రాండింగ్ ద్వారా క్షణాలను బంధిస్తూ, కథలను సృష్టిస్తూ, విజువల్ గుర్తింపులను నిర్మిస్తున్నాము.",
+"proj.neopics.cta": "వెబ్‌సైట్ చూడండి",
   },
   kn: { // Kannada
     "nav.home": "ಮುಖಪುಟ", "nav.about": "ನನ್ನ ಬಗ್ಗೆ", "nav.skills": "ಕೌಶಲ್ಯಗಳು", "nav.services": "ಸೇವೆಗಳು",
@@ -313,6 +331,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "ಸಂಪರ್ಕದಲ್ಲಿ", "contact.title2": "ಇರಿ",
     "contact.send": "ಸಂದೇಶ ಕಳುಹಿಸಿ",
     "footer.rights": "ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.", "lang.label": "ಭಾಷೆ",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "ವೃತ್ತಿಪರ ಛಾಯಾಗ್ರಹಣ ಮತ್ತು ಸೃಜನಾತ್ಮಕ ಬ್ರಾಂಡಿಂಗ್ ಮೂಲಕ ಕ್ಷಣಗಳನ್ನು ಸೆರೆಹಿಡಿದು, ಕಥೆಗಳನ್ನು ರಚಿಸಿ, ದೃಶ್ಯ ಗುರುತುಗಳನ್ನು ನಿರ್ಮಿಸುತ್ತೇವೆ.",
+"proj.neopics.cta": "ವೆಬ್‌ಸೈಟ್ ವೀಕ್ಷಿಸಿ",
   },
   ml: { // Malayalam
     "nav.home": "ഹോം", "nav.about": "എന്നെക്കുറിച്ച്", "nav.skills": "കഴിവുകൾ", "nav.services": "സേവനങ്ങൾ",
@@ -325,6 +346,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "ബന്ധപ്പെടുക", "contact.title2": "",
     "contact.send": "സന്ദേശം അയയ്ക്കുക",
     "footer.rights": "എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.", "lang.label": "ഭാഷ",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "പ്രൊഫഷണൽ ഫോട്ടോഗ്രഫിയും ക്രിയേറ്റീവ് ബ്രാൻഡിംഗും വഴി നിമിഷങ്ങളെ പകർത്തി കഥകളും ദൃശ്യ തിരിച്ചറിയലുകളും സൃഷ്ടിക്കുന്നു.",
+"proj.neopics.cta": "വെബ്സൈറ്റ് കാണുക",
   },
   bn: { // Bengali
     "nav.home": "হোম", "nav.about": "আমার সম্পর্কে", "nav.skills": "দক্ষতা", "nav.services": "পরিষেবা",
@@ -337,6 +361,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "যোগাযোগে", "contact.title2": "থাকুন",
     "contact.send": "বার্তা পাঠান",
     "footer.rights": "সর্বস্বত্ব সংরক্ষিত।", "lang.label": "ভাষা",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "পেশাদার ফটোগ্রাফি এবং সৃজনশীল ব্র্যান্ডিংয়ের মাধ্যমে মুহূর্তকে ধারণ করে গল্প ও ভিজ্যুয়াল পরিচয় তৈরি করি।",
+"proj.neopics.cta": "ওয়েবসাইট দেখুন",
   },
   mr: { // Marathi
     "nav.home": "मुख्यपृष्ठ", "nav.about": "माझ्याबद्दल", "nav.skills": "कौशल्ये", "nav.services": "सेवा",
@@ -349,6 +376,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "संपर्कात", "contact.title2": "रहा",
     "contact.send": "संदेश पाठवा",
     "footer.rights": "सर्व हक्क राखीव.", "lang.label": "भाषा",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "व्यावसायिक छायाचित्रण आणि सर्जनशील ब्रँडिंगद्वारे क्षण टिपणे, कथा तयार करणे आणि दृश्य ओळख निर्माण करणे.",
+"proj.neopics.cta": "वेबसाइट पहा",
   },
   gu: { // Gujarati
     "nav.home": "હોમ", "nav.about": "મારા વિશે", "nav.skills": "કુશળતા", "nav.services": "સેવાઓ",
@@ -361,6 +391,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "સંપર્કમાં", "contact.title2": "રહો",
     "contact.send": "સંદેશ મોકલો",
     "footer.rights": "બધા હકો અનામત.", "lang.label": "ભાષા",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "વ્યાવસાયિક ફોટોગ્રાફી અને સર્જનાત્મક બ્રાન્ડિંગ દ્વારા ક્ષણોને કેદ કરીને વાર્તાઓ અને દૃશ્ય ઓળખ બનાવીએ છીએ.",
+"proj.neopics.cta": "વેબસાઇટ જુઓ",
   },
   pa: { // Punjabi
     "nav.home": "ਹੋਮ", "nav.about": "ਮੇਰੇ ਬਾਰੇ", "nav.skills": "ਹੁਨਰ", "nav.services": "ਸੇਵਾਵਾਂ",
@@ -373,6 +406,9 @@ const partials: Record<string, Partial<Dict>> = {
     "contact.title1": "ਸੰਪਰਕ", "contact.title2": "ਕਰੋ",
     "contact.send": "ਸੁਨੇਹਾ ਭੇਜੋ",
     "footer.rights": "ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ.", "lang.label": "ਭਾਸ਼ਾ",
+    "proj.neopics.title": "NeoPics",
+"proj.neopics.desc": "ਪੇਸ਼ੇਵਰ ਫੋਟੋਗ੍ਰਾਫੀ ਅਤੇ ਰਚਨਾਤਮਕ ਬ੍ਰਾਂਡਿੰਗ ਰਾਹੀਂ ਯਾਦਗਾਰ ਪਲਾਂ ਨੂੰ ਕੈਦ ਕਰਨਾ ਅਤੇ ਵਿਜ਼ੂਅਲ ਪਛਾਣ ਬਣਾਉਣਾ।",
+"proj.neopics.cta": "ਵੈਬਸਾਈਟ ਵੇਖੋ",
   },
   or: { // Odia
     "nav.home": "ହୋମ୍", "nav.about": "ମୋ ବିଷୟରେ", "nav.skills": "ଦକ୍ଷତା", "nav.services": "ସେବା",

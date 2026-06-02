@@ -8,6 +8,7 @@ import thumbScaleInd from "@/assets/thumb-scale-ind.jpg";
 import thumbJobx from "@/assets/thumb-jobx.jpg";
 import thumbIilf from "@/assets/thumb-iilf.jpg";
 import thumbNewsletter from "@/assets/thumb-newsletter.jpg";
+import neopics from "@/assets/neopics-thumbnail.jpg.png";
 
 interface Project {
   key: string;
@@ -57,107 +58,132 @@ const projects: Project[] = [
     thumbnail: thumbNewsletter,
     link: "https://drive.google.com/file/d/1rI76Z-BNKbjlGO3eNomfWT_uy793L6LG/view?usp=sharing",
   },
+
+  // ✅ NEW PROJECT: NEOPICS
+ {
+  key: "neopics",
+  tags: ["Photography", "Website", "Portfolio", "Brand Identity"],
+  thumbnail: neopics,
+  link: "https://www.neopics.in",
+}
 ];
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const { t } = useLanguage();
+
   const title = t(`proj.${project.key}.title`);
   const description = t(`proj.${project.key}.desc`);
   const ctaLabel = t(`proj.${project.key}.cta`);
-  return (
-  <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    className={`group glass rounded-xl overflow-hidden ${
-      project.isPortrait ? "row-span-2" : ""
-    }`}
-  >
-    {/* Media */}
-    <div className={`relative overflow-hidden ${project.isPortrait ? "aspect-[9/16]" : "aspect-video"}`}>
-      {project.video ? (
-        <video
-          src={project.video}
-          poster={project.poster}
-          className="w-full h-full object-contain bg-black"
-          muted
-          autoPlay
-          loop
-          playsInline
-          preload="metadata"
-        />
-      ) : (
-        <img
-          src={project.thumbnail}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
-      )}
-    </div>
 
-    {/* Info */}
-    <div className="p-5">
-      <h3 className="font-heading text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{description}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-2 py-1 rounded-full bg-secondary text-muted-foreground"
-          >
-            {tag}
-          </span>
-        ))}
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`group glass rounded-xl overflow-hidden ${
+        project.isPortrait ? "row-span-2" : ""
+      }`}
+    >
+      {/* Media */}
+      <div
+        className={`relative overflow-hidden ${
+          project.isPortrait ? "aspect-[9/16]" : "aspect-video"
+        }`}
+      >
+        {project.video ? (
+          <video
+            src={project.video}
+            poster={project.poster}
+            className="w-full h-full object-contain bg-black"
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+          />
+        ) : (
+          <img
+            src={project.thumbnail}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        )}
       </div>
-      {project.link ? (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-primary hover:opacity-80 transition-opacity font-heading font-medium"
-        >
-          {ctaLabel} <ExternalLink size={14} />
-        </a>
-      ) : (
-        <span className="inline-flex items-center gap-2 text-sm text-primary font-heading font-medium">
-          {project.video ? <Play size={14} /> : <ExternalLink size={14} />}
-          {ctaLabel}
-        </span>
-      )}
-    </div>
-  </motion.div>
+
+      {/* Info */}
+      <div className="p-5">
+        <h3 className="font-heading text-lg font-semibold mb-2">{title}</h3>
+
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+          {description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-1 rounded-full bg-secondary text-muted-foreground"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {project.link ? (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:opacity-80 transition-opacity font-heading font-medium"
+          >
+            {ctaLabel} <ExternalLink size={14} />
+          </a>
+        ) : (
+          <span className="inline-flex items-center gap-2 text-sm text-primary font-heading font-medium">
+            {project.video ? <Play size={14} /> : <ExternalLink size={14} />}
+            {ctaLabel}
+          </span>
+        )}
+      </div>
+    </motion.div>
   );
 };
 
 const PortfolioSection = () => {
   const { t } = useLanguage();
-  return (
-  <section id="projects" className="py-24">
-    <div className="container">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-12"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          {t("portfolio.title1")} <span className="text-primary">{t("portfolio.title2")}</span>
-        </h2>
-        <div className="w-12 h-1 bg-primary rounded-full mb-4" />
-        <p className="text-muted-foreground max-w-lg">
-          {t("portfolio.subtitle")}
-        </p>
-      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
-        {projects.map((project, i) => (
-          <ProjectCard key={project.key} project={project} index={i} />
-        ))}
+  return (
+    <section id="projects" className="py-24">
+      <div className="container">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            {t("portfolio.title1")}{" "}
+            <span className="text-primary">{t("portfolio.title2")}</span>
+          </h2>
+
+          <div className="w-12 h-1 bg-primary rounded-full mb-4" />
+
+          <p className="text-muted-foreground max-w-lg">
+            {t("portfolio.subtitle")}
+          </p>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
+          {projects.map((project, i) => (
+            <ProjectCard key={project.key} project={project} index={i} />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
